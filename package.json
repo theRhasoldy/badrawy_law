@@ -1,0 +1,25 @@
+{
+  "name": "badrawy_law",
+  "version": "0.0.1",
+  "description": "Website for badrawy's law firm",
+  "main": "index.html",
+  "scripts": {
+    "test": "sass app/scss/main.scss dist/styles.css -w & live-server --browser=firefox-developer-edition"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theRhasoldy/badrawy_law.git"
+  },
+  "keywords": [
+    "law",
+    "html",
+    "scss",
+    "js"
+  ],
+  "author": "rhasoldy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theRhasoldy/badrawy_law/issues"
+  },
+  "homepage": "https://github.com/theRhasoldy/badrawy_law#readme"
+}
