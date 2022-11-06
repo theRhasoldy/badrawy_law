@@ -11,48 +11,91 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans:wght@600;700&display=swap"
 			rel="stylesheet"
 		/>
+		<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 	</head>
 
 	<body>
+		<img
+			class="background"
+			src="app/assets/img/statue.jpg"
+			alt="Background image with a female statue in the middle holding the justice scale"
+		/>
 		<header>
 			<nav id="main-nav">
 				<ul>
 					<li>
 						<h1><a href="#">BD</a></h1>
 					</li>
-					<li><a href="#testimonials">Testimonials</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Case Studies</a></li>
-					<li><a href="#">Our Team</a></li>
+					<li><a class="marker" href="#testimonials">Testimonials</a></li>
+					<li><a class="marker" href="#">Services</a></li>
+					<li><a class="marker" href="#">Case Studies</a></li>
+					<li><a class="marker" href="#">Our Team</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main>
-			<!--Hero Section-->
+			<!--Hero section-->
 			<section id="hero">
 				<div class="center">
 					<h2 class="display">Badrawy Law Firm</h2>
-					<h3 class="title">
-						Experts in <span class="experts">Real Estate</span>
-					</h3>
+					<div class="rotating-text">
+						<h3 class="title">Experts in&nbsp</h3>
+						<h3 class="highlight">
+							<span class="word">Real&nbspEstate.</span>
+							<span class="word">Pharmaceutical.</span>
+							<span class="word">Business.</span>
+							<span class="word">Finance.</span>
+						</h3>
+					</div>
+
+					<script src="app/js/text_shuffle.js" ;></script>
 				</div>
-				<p>
-					The leading firm in managing all your legal actions and paving your
-					way to a successful business.
-				</p>
-				<a href="#contact" class="cta">
-					<div></div>
-					Let's Talk
-				</a>
+				<div class="hero-content">
+					<p>
+						The leading firm in managing all your legal actions and paving your
+						way to a successful business.
+					</p>
+					<a href="#contact" class="cta">
+						<iconify-icon icon="fluent:pen-16-filled"></iconify-icon>
+						Let's Talk
+					</a>
+				</div>
+
 				<div class="hint">
-					<div></div>
+					<iconify-icon icon="akar-icons:arrow-down" width="24"></iconify-icon>
 					Scroll Down
 				</div>
 			</section>
 
-			<!--Testimonials Section-->
-			<section id="testimonials"></section>
+			<!--Testimonials section-->
+			<section id="testimonials">
+				<h2 class="mini-title">Testimonials</h2>
+				<div class="half-grid">
+					<p>
+						“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor
+						massa lorem, sed hendrerit metus mollis eu.” -John Doe
+					</p>
+					<div class="quote">"</div>
+					<div class="quote">"</div>
+					<p>
+						“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor
+						massa lorem, sed hendrerit metus mollis eu.” -John Doe
+					</p>
+				</div>
+			</section>
+
+			<!--Services section-->
+			<section id="services"></section>
+
+			<!--Trusted clients-->
+			<section id="clients"></section>
+
+			<!--Case studies section-->
+			<section id="cases"></section>
+
+			<!--Contact-->
+			<section id="contact"></section>
 		</main>
 	</body>
 </html>

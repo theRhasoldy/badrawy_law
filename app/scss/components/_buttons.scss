@@ -1,0 +1,47 @@
+@use "../utilities/_variables.scss" as *;
+
+.cta {
+	width: fit-content;
+	padding: 0.65rem 1.2rem 0.65rem 0.65rem;
+	border-radius: 70px;
+	outline: var(--accent-color) solid $outline-width;
+	display: flex;
+	gap: 0.5em;
+	align-items: center;
+	box-shadow: inset 0 0 0 0 var(--accent-color);
+	transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+	iconify-icon {
+		color: var(--background-color);
+		background-color: var(--accent-color);
+		padding: $icon-padding;
+		border-radius: 100%;
+	}
+
+	&:hover {
+		box-shadow: inset 10em 0 0 0 var(--accent-color);
+		color: var(--background-color);
+
+		iconify-icon {
+			animation: tilt-shaking 0.25s infinite;
+		}
+
+		@keyframes tilt-shaking {
+			0% {
+				transform: rotate(0deg);
+			}
+			25% {
+				transform: rotate(5deg);
+			}
+			50% {
+				transform: rotate(0eg);
+			}
+			75% {
+				transform: rotate(-5deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+@use "../utilities/functions" as *;
+
+.center {
+	h2,
+	h3 {
+		text-align: center;
+	}
+}
+
+.background {
+	display: block;
+	position: absolute;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	z-index: -1;
+	width: 100%;
+	animation: image-fade-in 2s;
+}
+
+.rotating-text {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	font-family: "Work Sans";
+	font-size: rem(62);
+	font-weight: 300;
+	text-transform: uppercase;
+	color: var(--display-color);
+
+	& h3 {
+		white-space: nowrap;
+		flex-basis: 23%;
+		vertical-align: top;
+
+		& .word {
+			position: absolute;
+			display: flex;
+			opacity: 0;
+
+			& .letter {
+				transform-origin: center center 25px;
+			}
+			& .letter.out {
+				transform: rotateX(90deg);
+				transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+			}
+			& .letter.in {
+				transition: 0.38s ease;
+			}
+			& .letter.behind {
+				transform: rotateX(-90deg);
+			}
+		}
+	}
+}
+
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	margin-top: 13em;
+	width: 40%;
+	gap: 3em;
+}
+
+@keyframes image-fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

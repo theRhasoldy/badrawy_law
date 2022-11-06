@@ -1,0 +1,29 @@
+@use "../utilities/_variables.scss" as *;
+
+.hint {
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1em;
+	color: var(--hint-color);
+	text-transform: uppercase;
+	font-family: "Work Sans";
+	margin-block: 4em;
+	animation: bob 1.7s infinite alternate;
+
+	& iconify-icon {
+		outline: $outline-width solid var(--hint-color);
+		padding: $icon-padding;
+		border-radius: 100%;
+	}
+}
+
+@keyframes bob {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}

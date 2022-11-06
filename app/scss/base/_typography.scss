@@ -1,0 +1,44 @@
+@use "../utilities/functions" as *;
+
+h2 {
+	font-family: "Work Sans";
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--display-color);
+}
+
+h3 {
+	margin: 0;
+	padding: 0;
+	font-family: "Work Sans";
+	font-weight: 300;
+	text-transform: uppercase;
+	color: var(--display-color);
+}
+
+.display {
+	font-size: rem(140);
+}
+
+.title {
+	font-size: rem(72);
+}
+
+.highlight {
+	color: var(--accent-color);
+}
+
+p {
+	font-family: "Montserrat";
+	color: var(--body-color);
+	font-size: rem(24);
+	line-height: 180%;
+}
+
+a {
+	font-family: "Work Sans";
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: rem(24);
+	color: var(--accent-color);
+}

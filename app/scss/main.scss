@@ -1,3 +1,11 @@
-h1 {
-	color: blue;
-}
+@use "base/global";
+@use "base/colors";
+@use "base/typography";
+
+@use "layout/nav";
+@use "layout/grid";
+
+@use "components/buttons";
+@use "components/hints";
+
+@use "pages/home";
