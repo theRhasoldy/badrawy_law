@@ -17,11 +17,12 @@ h3 {
 }
 
 .display {
-	font-size: rem(140);
+	font-size: clamp(rem(64), 8vw, rem(140));
 }
 
 .title {
-	font-size: rem(72);
+	font-size: clamp(rem(55), 6vw, rem(86));
+	white-space: nowrap;
 }
 
 .highlight {

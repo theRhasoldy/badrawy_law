@@ -46,11 +46,12 @@ h3 {
 }
 
 .display {
-  font-size: 8.75rem;
+  font-size: clamp(4rem, 8vw, 8.75rem);
 }
 
 .title {
-  font-size: 4.5rem;
+  font-size: clamp(3.4375rem, 6vw, 5.375rem);
+  white-space: nowrap;
 }
 
 .highlight {
@@ -193,53 +194,81 @@ a {
     transform: translateY(-10px);
   }
 }
-.center h2,
-.center h3 {
-  text-align: center;
+.center {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: wrap;
+  width: 80%;
+}
+@media only screen and (min-width: 768px) {
+  .center {
+    width: fit-content;
+    text-align: initial;
+    white-space: nowrap;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .center {
+    width: fit-content;
+    text-align: initial;
+    white-space: nowrap;
+  }
 }
 
 .background {
   display: block;
   position: absolute;
+  top: initial;
   left: 0;
   margin: 0;
   padding: 0;
   z-index: -1;
   width: 100%;
-  animation: image-fade-in 2s;
+  animation: image-fade-in 3s;
+}
+@media only screen and (min-width: 768px) {
+  .background {
+    position: absolute;
+    top: 0%;
+  }
 }
 
 .rotating-text {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
   font-family: "Work Sans";
-  font-size: 3.875rem;
   font-weight: 300;
   text-transform: uppercase;
   color: var(--display-color);
+  font-size: clamp(2.5rem, 1vw, 3rem);
 }
-.rotating-text h3 {
-  white-space: nowrap;
-  flex-basis: 23%;
-  vertical-align: top;
+@media only screen and (min-width: 768px) {
+  .rotating-text {
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: clamp(3rem, 5.25vw, 4.625rem);
+  }
 }
 .rotating-text h3 .word {
   position: absolute;
   display: flex;
+  justify-content: center;
   opacity: 0;
 }
-.rotating-text h3 .word .letter {
+.rotating-text h3 .letter {
   transform-origin: center center 25px;
 }
-.rotating-text h3 .word .letter.out {
+.rotating-text h3 .letter.out {
   transform: rotateX(90deg);
   transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
 }
-.rotating-text h3 .word .letter.in {
+.rotating-text h3 .letter.in {
   transition: 0.38s ease;
 }
-.rotating-text h3 .word .letter.behind {
+.rotating-text h3 .letter.behind {
   transform: rotateX(-90deg);
 }
 
